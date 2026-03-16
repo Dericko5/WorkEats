@@ -1,0 +1,8 @@
+node_modules/
+dist/
+release/
+.env
+.workeats-config.json
+*.log
+.DS_Store
+Thumbs.db
