@@ -212,7 +212,8 @@ if (fs.existsSync(distPath)) {
 let activePort = 3000;
 
 function createServer(port = 3000) {
-  const p = parseInt(process.env.PORT || port, 10);
+  // When called from Electron, always use the port argument (not PORT env var)
+  const p = parseInt(port, 10);
   activePort = p;
 
   const server = app.listen(p, '0.0.0.0', () => {
